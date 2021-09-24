@@ -1,0 +1,75 @@
+* {
+    font-family: Calibri;
+}
+
+body {
+    background-color:rgb(23,120,189);
+    height: 100%;
+    margin:0;
+}
+
+h4 {
+    font-weight: normal;    
+}
+
+input::placeholder {
+    color: lightgray;
+}
+
+.background {
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+form {
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+
+.login {
+    background-color:white;
+    padding-left:10vh;
+    padding-right:10vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+       
+}
+
+.login h3 {
+    font-weight: normal;
+}
+
+.textBox {
+    padding:5px;
+    border-color: lightgray;
+    border-radius: 5px;
+}
+#postitImage {
+    display:flex;
+    align-items:flex-end;
+}
+#postitImage img {
+    
+    background: url("/res/images/stickyNote.jpg");
+    height:100px;
+    width:100px;
+    background-repeat: no-repeat;
+}
+
+#submitButton {
+    padding:5px 10px 5px 10px;
+    background-color: rgb(13,88,154) ;
+    color:white;
+    font-weight: bold;
+}
+
+#forgotPassword {
+    margin-bottom: 5vh
+}
