@@ -57,7 +57,7 @@ nav div.search-container > button {
 
 
 .box {
-    position: absolute;
+    position: relative;
     left: 30%;
     right: 30%;
     width: 40%;
@@ -91,4 +91,61 @@ nav div.search-container > button {
     height: 50%; 
     background-color: white;
     box-shadow: 0 0 20px rgba(33,33,33,.2);  
+}
+
+/* div div img {
+    height: 100%;
+    display: inline;
+    float: left;
+}
+
+div div p {
+    height: 100%;
+    display: inline;
+    float: right;
+} */
+
+.userpic {
+    display: inline;
+    height: 100%;
+    max-width: 50%;
+    text-align: left;
+}
+
+.textgrey {
+    display: inline;
+    height: 100%;
+    max-width: 50%;
+    float: right;
+    color: grey;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0%;
+}
+
+.top {
+    height: 25px;
+    flex-grow: 4;
+    padding: 5px;
+}
+.contentpic {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+h3 {
+    padding-left: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.likebutton {
+    height: 30px;
+    flex-grow: 4;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.likebuttonpic {
+    height: 100%;
+    display: inline;
+    float: left;
 }
