@@ -55,7 +55,6 @@ nav div.search-container > button {
     background-color:#0d5797;
 }
 
-
 .box {
     position: relative;
     left: 30%;
@@ -73,10 +72,10 @@ nav div.search-container > button {
     width: 80%;
     height: 50%; 
     background-color: white;
-    box-shadow: 0 0 20px rgba(33,33,33,.2); 
+    box-shadow: 0 0 20px rgba(33,33,33,.2);
 }
 
-.post2 {
+.post1 + .post2 {
     margin-top: 3%;
     width: 80%;
     height: 50%; 
@@ -84,31 +83,19 @@ nav div.search-container > button {
     box-shadow: 0 0 20px rgba(33,33,33,.2); 
 }
 
-.post3 {
+.post2 ~ .post3 {
     margin-top: 3%;
     margin-bottom: 5%;
     width: 80%;
     height: 50%; 
     background-color: white;
-    box-shadow: 0 0 20px rgba(33,33,33,.2);  
+    box-shadow: 0 0 20px rgba(33,33,33,.2);
 }
-
-/* div div img {
-    height: 100%;
-    display: inline;
-    float: left;
-}
-
-div div p {
-    height: 100%;
-    display: inline;
-    float: right;
-} */
 
 .userpic {
     display: inline;
     height: 100%;
-    max-width: 50%;
+    max-width: 50%; 
     text-align: left;
 }
 
