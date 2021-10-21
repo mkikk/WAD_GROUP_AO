@@ -16,16 +16,15 @@ $(function() {
             let title = $('<h3>').text(post.title);
             let body = $('<p>').text(post.body);
 
-            let userPhoto = $('<img class="userpic" alt="Profile picture">');
-            
-            // let photo = $('<img class="contentpic">').src(post.photo_path).alt(post.photo_path);
-            let likeButton = $('<img class="likebuttonpic" alt="Like button">')
+            let userPhoto = $('<img class="userpic" src="'+post.author_path+'" alt="Profile picture">');
+            let photo = $('<img class="contentpic" src="'+post.photo_path+'" alt="'+post.photo_alt+'">');
+            let likeButton = $('<img class="likebuttonpic" src="'+post.like_path+'" alt="Like button">');
 
             div_top.append(userPhoto)
             div_top.append(author)
             div_top.append(time)
 
-            // div_content.append(photo)
+            div_content.append(photo)
             div_content.append(title)
             div_content.append(body)
 
