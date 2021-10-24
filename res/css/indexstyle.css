@@ -3,15 +3,16 @@ html, body {
     padding: 0;
     background-color: #1778bd;
 }
-
-.navigation {
-    top: 0;
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+h3 {
+    padding-left: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
+
+p {
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 
 nav {
     display: flex;
@@ -28,9 +29,6 @@ nav div img {
     height: 100%;
 }
 
-.usericon {
-    text-align: right;
-}
 
 nav div.search-container {
     text-align: center;
@@ -53,6 +51,15 @@ nav div.search-container > button {
     border: 1px solid #e0e0e0;
     cursor: pointer;
     background-color:#0d5797;
+}
+
+.navigation {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .box {
@@ -99,19 +106,11 @@ nav div.search-container > button {
     padding: 5px;
 }
 
+
+
 .contentpic {
     width: 100%;
     padding-bottom: 10px;
-}
-
-h3 {
-    padding-left: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-p {
-    padding: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .author {
@@ -130,4 +129,35 @@ p {
     height: 100%;
     display: inline;
     float: left;
+}
+
+.usericon{
+    position:relative;
+    display:inline-block;
+    text-align: right;
+}
+
+.usericon > button {
+    border: 0px;
+    background-color:white;
+}
+
+.dropdown {
+    display:none;
+    height:40px;
+    text-align: left;
+    position: absolute;
+    background-color: #f1f1f1;
+    width:100%;
+    z-index: 1;
+    border-bottom: 1px solid rgb(83, 72, 72);
+}
+
+
+.show {display: block;}
+
+#userData p {
+    font-size: 16px;
+    padding: 0px;
+    margin:0px;
 }

@@ -1,5 +1,5 @@
 $(function() {
-
+    
     // Retrieving the posts from the given url and outputting the posts to the html page.
     $.get("https://api.npoint.io/9a36eccdabc48a0eef0a", function(posts) {
         
@@ -40,4 +40,14 @@ $(function() {
 
     })
 
+    function showDropdown() {
+      document.getElementById("username").textContent = sessionStorage.getItem('username');
+      document.getElementById("usermail").textContent = sessionStorage.getItem('email');
+      var element = document.getElementById("userData");
+      element.classList.toggle("show");
+    }
+    
+    document.getElementById("iconbtn").addEventListener("click", showDropdown); 
 });
+
+
