@@ -1,23 +1,37 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <header-compo></header-compo>
     <router-view />
+    <footerCompo></footerCompo>
   </div>
 </template>
+<script>
+import footerCompo from "@/components/footerCompo.vue";
+import HeaderCompo from "./components/headerCompo.vue";
+export default {
+  name: "App",
+  components: {
+    footerCompo,
+    HeaderCompo,
+  },
+};
+</script>
 
-<style lang="scss">
+HeaderCompo
+<style HeaderCompostyle lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #1778bd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-#nav {
+.headerfooter {
   padding: 30px;
 
   a {
