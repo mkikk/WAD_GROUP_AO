@@ -30,7 +30,7 @@
 <script>
 export default {
   name: "postCompo",
-/*   data: function () {
+  /*   data: function () {
     return {};
   }, */
   methods: {
@@ -40,10 +40,10 @@ export default {
   },
   computed: {
     postList() {
-      return this.$store.getters.postList
+      return this.$store.getters.postList;
     },
   },
-/*   mounted() {
+  /*   mounted() {
     this.$store.dispatch("getPosts");
   }, */
 };
