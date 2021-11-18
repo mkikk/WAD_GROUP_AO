@@ -12,9 +12,9 @@ export default {
   components: {
     postCompo,
   },
-  data() {
+/*   data() {
     return {};
-  },
+  }, */
   methods: {
     resetLikes: function () {
       this.$store.dispatch("resetLikesAct");

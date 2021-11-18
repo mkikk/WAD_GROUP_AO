@@ -1,6 +1,6 @@
 <template>
   <div class="postComp">
-    <div class="post" v-for="post in posts" :key="post.id">
+    <div class="post" v-for="post in postList" :key="post.id">
       <div class="postHeader">
         <div class="user">
           <img class="profile_picture" :src="post.author_path" alt="icon" />
@@ -26,26 +26,26 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: "postCompo",
-  data: function () {
+/*   data: function () {
     return {};
-  },
-  computed: {
-    posts() {
-      return this.$store.state.posts;
-    },
-  },
-  mounted() {
-    this.$store.dispatch("getPosts");
-  },
-
+  }, */
   methods: {
     increaseLikes: function (post) {
       this.$store.dispatch("increaseLikesAct", post);
     },
   },
+  computed: {
+    postList() {
+      return this.$store.getters.postList
+    },
+  },
+/*   mounted() {
+    this.$store.dispatch("getPosts");
+  }, */
 };
 </script>
 
