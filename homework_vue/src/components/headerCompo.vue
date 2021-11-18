@@ -1,16 +1,12 @@
 <template>
   <header class="headerCompo">
-    <div class="logo">
-      <img src="@/assets/images/logo.jpg" />
-    </div>
+    <div class="logo"></div>
     <div class="routing">
       <router-link to="/login">Login</router-link> |
       <router-link to="/">Posts</router-link> |
       <router-link to="/contact">Contact Us</router-link>
     </div>
-    <div class="user">
-      <img src="@/assets/images/usericonthumbnail.png" />
-    </div>
+    <div class="user"></div>
   </header>
 </template>
 
