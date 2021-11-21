@@ -14,7 +14,7 @@
         <img :src="post.photo_path" :alt="post.photo_alt" />
       </div>
       <div class="postBody">
-        <h2 class="location">{{ post.location }}</h2>
+        <h2 class="location">{{ post.title }}</h2>
         <p class="body">{{ post.body }}</p>
       </div>
       <div class="likes">
