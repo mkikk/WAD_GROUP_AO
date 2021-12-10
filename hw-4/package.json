@@ -1,0 +1,31 @@
+{
+  "name": "hw-4",
+  "version": "1.0.0",
+  "description": "Homework 4 ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkikk/WAD_GROUP_AO.git"
+  },
+  "keywords": [
+    "express",
+    "ejs",
+    "node"
+  ],
+  "author": "Kertu-Carina Kallaste, Markus Kikkatalo, Emma Belinda Semilarski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkikk/WAD_GROUP_AO/issues"
+  },
+  "homepage": "https://github.com/mkikk/WAD_GROUP_AO#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "pg": "^8.7.1"
+  }
+}

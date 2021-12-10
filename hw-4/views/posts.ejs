@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/post.css">
+    <title>Posts</title>
+  </head>
+ <body>
+ <%- include('./partials/header.ejs') %>
+ <div class="posts list">
+    <h2>All posts</h2>
+    <% if (posts.length > 0) { %>
+    <% posts.forEach(post => { %>
+    <!-- remove hyperlink from a tag-->
+    <a class="singlepost" href="/singlepost/<%= post.id %>">
+      <div class="postInfo">
+        <h3 class="title">
+            <%= post.title %>
+        </h3>
+        <p class="body">
+          <%= post.body %>
+        </p>
+      </div>
+      <div class="likes">
+        <a class="likeButton" data-like="<%= posts.id %>"> <img src="/images/like.png" alt="Like"></a>     
+        <p >
+          <%= post.likes %>
+        </p>
+      </div>
+    </a>
+    <% }) %>
+    <% } else { %>
+    <p>You did not post anything...</p>
+    <% } %>
+ </div>
+ <%- include('./partials/footer.ejs') %>
+  <script>
+      const likereq = document.querySelector("a.likeButton");
+      likereq.addEventListener("click", (e) => {
+        const endpoint = `/posts/${likereq.dataset.like}`;
+        fetch(endpoint, {
+          // method is UPDATE or PUT, must check
+          method: "PUT",
+        }).then((window.location.href = "/posts"));
+      });
+    </script>
+</html>
