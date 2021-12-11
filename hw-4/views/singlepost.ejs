@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/css/post.css" />
+  <link rel="stylesheet" href="/css/singlepost.css">
   <title>
     <%= posts.title %>
   </title>
@@ -23,9 +24,9 @@
           </span>
         </div>
       </div>
-      <div class="postPicture">
+      <!-- <div class="postPicture">
         <img src="<%= posts.post_src %>" alt="Post picture" />
-      </div>
+      </div> -->
       <div class="postBody">
         <div>
           <h2>
@@ -37,15 +38,15 @@
             <%= posts.body %>
           </p>
         </div>
-        <div class="likes">
-          <h3>Likes <%= posts.likes %>
+        <div class="likes2">
+          <h3>Likes: <%= posts.likes %>
           </h3>
         </div>
       </div>
-      <button class="deleteButton">
-        <a class="delete" data-del="<%= posts.id %>">Delete</a>
-      </button>
     </div>
+    <button class="deleteButton">
+      <a class="delete" data-del="<%= posts.id %>">Delete</a>
+    </button>
     <%- include('./partials/footer.ejs') %>
       <script>
         const delreq = document.querySelector("a.delete");
