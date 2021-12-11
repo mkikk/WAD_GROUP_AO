@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 app.get("/posts", async (req, res) => {
     try {
         console.log("get posts request has arrived");
-        const posts = await pool.query("SELECT * FROM posts");
+        const posts = await pool.query("SELECT * FROM posts ORDER BY id ASC");
         res.render("posts", { posts: posts.rows });
     } catch (err) {
         console.error(err.message);
@@ -84,17 +84,14 @@ app.post("/posts", async (req, res) => {
 app.put("/posts/:id", jsonParser, async (req, res) => {
     try {
         const { id } = req.params;
-        //const post = req.body; // ei saa body kätte kuna requestil puudub body
         const singlepost = await pool.query(
-            "SELECT * FROM posts WHERE id = $1 LIMIT 1", [id]
+            "SELECT * FROM posts WHERE id = $1", [id]
           );
         const post = singlepost.rows[0];
-        console.log(post);
         const newLikes = post.likes + 1;
 
         console.log("update request has arrived");
         const updatepost = await pool.query(
-            //"UPDATE posts SET (likes) = ($2) WHERE id = $1", [id, post.likes + 1]
             "UPDATE posts SET (title, body, user_icon, post_src, likes) = ($2, $3, $4, $5, $6) WHERE id = $1",
             [id, post.title, post.body, post.user_icon, post.post_src, newLikes]
         );

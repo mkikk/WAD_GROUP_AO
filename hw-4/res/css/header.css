@@ -1,0 +1,26 @@
+header {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.usericon {
+    position:relative;
+    display:inline-block;
+    text-align: right;
+}
+
+.navbar {
+    display: flex;
+    background-color: #ffffff;
+    height: 30px;
+    flex-grow: 4;
+    padding: 10px;
+}
+
+.navLinks {
+    align-self: center;
+}

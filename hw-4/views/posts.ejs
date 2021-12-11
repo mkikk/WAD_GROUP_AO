@@ -12,27 +12,38 @@
 
 <body>
   <%- include('./partials/header.ejs') %>
-    <div class="posts list">
-      <h2>All posts</h2>
+    <div class="postsList">
       <% if (posts.length> 0) { %>
         <% posts.forEach(post=> { %>
           <!-- remove hyperlink from a tag-->
-          <a class="singlepost" href="/singlepost/<%= post.id %>">
-            <div class="postInfo">
-              <h3 class="title">
-                <%= post.title %>
-              </h3>
-              <p class="body">
-                <%= post.body %>
-              </p>
-            </div>
+          <div class="post">
+            <a class="post_content" href="/singlepost/<%= post.id %>">
+              <div class="postHeader">
+                <div class="user">
+                  <img class="profile_picture" src="<%= post.user_icon %>" alt="Profile picture" />
+                </div>
+                <div class="date">
+                  <%= post.post_date %>
+                </div>
+              </div>
+              <div class="postBody">
+                <img class="postPicture" src="<%= post.post_src %>" alt="Post picture" />
+                <h2 class="title">
+                  <%= post.title %>
+                </h2>
+                <p class="body">
+                  <%= post.body %>
+                </p>
+              </div>
+            </a>
             <div class="likes">
-              <a class="likeButton" data-like="<%= post.id %>" data-post="<%= post %>"><img src="/images/like.png" alt="Like"></a>
-              <p>
+              <a class="likeButton" data-like="<%= post.id %>"" id="notClicked">
+                <img class="like_picture" src=" /images/like.png" alt="Like"></a>
+              <span class="nr_likes">
                 <%= post.likes %>
-              </p>
+              </span>
             </div>
-          </a>
+          </div>
           <% }) %>
             <% } else { %>
               <p>You did not post anything...</p>
@@ -40,27 +51,22 @@
     </div>
     <%- include('./partials/footer.ejs') %>
       <script>
-        // selle variandiga reageeris ainult esimese postituse nupule
-        const likereq = document.querySelector("a.likeButton");
-        likereq.addEventListener("click", (e) => {
-          console.log("button clicked!"); // testimiseks, kõik ok
-          const id = likereq.dataset.like;
-          const endpoint = `/posts/${id}`;
-          fetch(endpoint, {
-            // requestil pole body
-            method: "PUT",
-          }).then((window.location.href = "/posts"));
-        });
-
-        // niimoodi ei reageeri üldse clickidele
-        /*         const likeButtons = document.querySelectorAll("a.likeButton");
-                likeButtons.foreach(btn => btn.addEventListener("click", (event) => {
-                    const endpoint = `/posts/${btn.dataset.like}`;
-                    fetch(endpoint, {
-                      method: "PUT",
-                    }).then((window.location.href = "/posts"));
-                  })
-                ); */
+        const likeButtons = document.querySelectorAll("a.likeButton");
+        likeButtons.forEach(btn => {
+          btn.addEventListener("click", (event) => {
+            if (btn.id === "notClicked") {
+              const id = btn.dataset.like;
+              const endpoint = `/posts/${id}`;
+              btn.id = "clicked";
+              fetch(endpoint, {
+                method: "PUT",
+              }).then((window.location.href = "/posts"));
+            } else {
+              console.log("This button has been clicked!");
+              event.preventDefault();
+            }
+          })
+        })
       </script>
 
 </html>
