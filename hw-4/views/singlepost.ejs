@@ -16,7 +16,7 @@
     <div class="singlepost">
       <div class="postHeader">
         <div>
-          <img src="<%= posts.user_icon %>" alt="User icon" />
+          <img class="profile_picture" src="<%= posts.user_icon %>" alt="User icon" />
         </div>
         <div>
           <span>
@@ -24,20 +24,14 @@
           </span>
         </div>
       </div>
-      <!-- <div class="postPicture">
-        <img src="<%= posts.post_src %>" alt="Post picture" />
-      </div> -->
       <div class="postBody">
-        <div>
-          <h2>
-            <%= posts.title %>
-          </h2>
-        </div>
-        <div class="content">
-          <p>
-            <%= posts.body %>
-          </p>
-        </div>
+        <img class="postPicture" src="<%= posts.post_src %>" alt="Post picture" />
+        <h2 class="title">
+          <%= posts.title %>
+        </h2>
+        <p class="body">
+          <%= posts.body %>
+        </p>
         <div class="likes2">
           <h3>Likes: <%= posts.likes %>
           </h3>

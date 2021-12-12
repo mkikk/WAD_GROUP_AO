@@ -34,7 +34,7 @@ body {
 
 .deletebutton {
     margin-top: 10%;
-    position: absolute;
+    position: relative;
     height: 50px;
     width: 100px;
     display: flex;

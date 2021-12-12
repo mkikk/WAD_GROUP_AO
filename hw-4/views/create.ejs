@@ -5,22 +5,28 @@
 <link rel="stylesheet" href="/css/newPost.css">
 <link rel="stylesheet" href="/css/style.css">
 <title> Create post</title>
+
 <body>
- <%- include('./partials/header.ejs') %>
- <br>
- <div class="create-post">
-    <form action="/posts" method="POST">
-        <label for="title">Post title:</label>
-        <input type="text" id="title" name="title" required><br><br>
-        <label for="body">Post body:</label>
-        <input type="text" id="body" name="body" required><br><br>
-        <label for="user_icon"> User picture url:</label>
-        <input type="text" id="user_icon" name="user_icon"></textarea><br><br>
-        <label for="post_src">Post picture url:</label>
-        <input type="text" id="post_src" name="post_src" required><br><br>
-        <button class="addPostButton">Add post</button>
-    </form>
- </div>
- <%- include('./partials/footer.ejs') %>
+    <%- include('./partials/header.ejs') %>
+        <br>
+        <main>
+            <div class="create-post">
+                <form action="/posts" method="POST">
+                    <label for="title">Post title:</label>
+                    <input type="text" id="title" name="title" required><br><br>
+                    <label for="body">Post body:</label>
+                    <input type="text" id="body" name="body" required><br><br>
+                    <label for="user_icon"> User picture url:</label>
+                    <input type="text" id="user_icon" name="user_icon"></textarea><br><br>
+                    <label for="post_src">Post picture url:</label>
+                    <input type="text" id="post_src" name="post_src" required><br><br>
+                    <button class="addPostButton">Add post</button>
+                </form>
+            </div>
+        </main>
+        <footer class="fixed">
+            <%- include('./partials/footer.ejs') %>
+        </footer>
 </body>
+
 </html>

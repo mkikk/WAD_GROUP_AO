@@ -5,11 +5,9 @@ html, body {
 }
 
 .postsList {
-    position: relative;
-    left: 30%;
-    right: 30%;
+    margin: auto;
     width: 40%;
-    height: 100%;
+    padding: 10px;
     background-color: white;
     padding-bottom: 25px;
     display: flex;
@@ -21,14 +19,15 @@ html, body {
 .welcome {
     width: 400px;
     height: 50px;
-    background: #CCCCCC;
+    background: snow;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 10px solid #000000;
-    padding: 10px;
+    padding: 30px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     position: absolute; 
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 2px 5px 15px #000000;
 }
